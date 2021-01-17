@@ -31,7 +31,7 @@ class Fib extends Component {
     }).then((response) => {
       this.fetchIndexes();
       this.fetchValues();
-    })
+    }).catch((error) => alert(error.response.data))
 
     this.setState({ index: '' });
   };
