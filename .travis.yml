@@ -17,3 +17,15 @@ after_success:
   - docker push coderyihaowang/multi-server
   - docker push coderyihaowang/multi-worker
   - docker push coderyihaowang/multi-nginx
+
+deploy:
+  provider: elasticbeanstalk
+  region: 'ap-southeast-2'
+  app: 'multi-docker'
+  env: 'MultiDocker-env'
+  bucket_name: 'elasticbeanstalk-ap-southeast-2-170566615202'
+  bucket_path: 'docker-multi'
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
