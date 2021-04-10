@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1
+  
+kind: Certificate
+metadata:
+  name: asdfasdfasdfasdf-page
+spec:
+  secretName: asdfasdfasdfasdf-page
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: asdfasdfasdfasdf.page
+  dnsNames:
+    - asdfasdfasdfasdf.page
+    - www.asdfasdfasdfasdf.page
