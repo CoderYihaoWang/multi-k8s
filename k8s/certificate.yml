@@ -2,7 +2,7 @@ apiVersion: cert-manager.io/v1
   
 kind: Certificate
 metadata:
-  name: asdfasdfasdfasdf-page
+  name: asdfasdfasdfasdf-page-tls
 spec:
   secretName: asdfasdfasdfasdf-page
   issuerRef:
